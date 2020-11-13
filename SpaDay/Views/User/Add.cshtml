@@ -2,14 +2,21 @@
 
 <h1>Login</h1>
 
-<form>
+@if (ViewBag.error == "Error: Passwords did not match. Please Try again.")
+{
+    <h2>@ViewBag.error</h2>
+}
+
+<form method="post" action="/user/add">
 
     Username: <input type="text" name="username"/>
     <br />
     Password: <input type="password" name="password"/>
     <br />
-    Verify Password: <input type="password" name="password"/>
+    Verify Password: <input type="password" name="verify"/>
     <br />
     Email:    <input type="text" name="email"/>
+    <br />
+    <input type="submit" value="Sign Up">
 
 </form>
