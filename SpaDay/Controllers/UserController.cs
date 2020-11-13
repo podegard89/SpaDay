@@ -12,5 +12,11 @@ namespace SpaDay.Controllers
         {
             return View();
         }
+
+        [Route("user/add")]
+        public IActionResult Add()
+        {
+            return View();
+        }
     }
 }
